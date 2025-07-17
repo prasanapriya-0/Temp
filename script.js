@@ -6,10 +6,13 @@ const result = document.getElementById('result');
 navigator.mediaDevices.getUserMedia({ video: true })
   .then(stream => {
     video.srcObject = stream;
+      video.play();
+   };
   })
   .catch(err => {
-    alert("Camera access denied or not supported.");
-  });
+    alert("Camera access failed:"+err.message);
+    console.error("Camera error:",err);
+ });
 
 function captureFrame() {
   const context = canvas.getContext('2d');
