@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Body Temperature Estimator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Body Temperature Estimator</h1>
+
+  <video id="video" autoplay playsinline></video>
+  <br>
+  <button onclick="captureFrame()">Tap to Scan</button>
+  <p id="result">Waiting for scan...</p>
+  <canvas id="canvas" style="display:none;"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
